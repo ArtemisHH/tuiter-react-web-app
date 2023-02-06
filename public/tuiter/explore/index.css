@@ -1,14 +1,22 @@
 /*This is index stylesheet for Explore of Tuiter*/
 .wd-explore-search {
-    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    flex-direction: column;
 }
-
-.wd-explore-search > .fa.fa-search {
-    position: absolute;
+.wd-explore-search-top {
+    padding: 16px 0px 8px 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.wd-explore-search > .wd-explore-search-top .fa.fa-search {
+    position: relative;
     top: 15px;
     left: 20px;
+    z-index: 10;
 }
-.wd-explore-search > .wd-explore-input {
+.wd-explore-search > .wd-explore-search-top > .wd-explore-input {
     background-color: darkgray;
     height: 40px;
     position: absolute;
@@ -17,23 +25,44 @@
     border-radius: 20px;
     width: 80%;
 }
-.wd-explore-labels {
-    padding: 12px 0px 0px 12px;
-    display: flex;
+.wd-explore-setting {
+    padding: 16px;
 }
-.wd-explore-labels > .wd-explore-label {
-    flex-basis: 100%
+.wd-explore-search > .wd-explore-search-top > .fa.fa-gear {
+    position: relative;
+
+}
+.wd-explore-labels {
+    position: relative;
+    padding-left: 16px;
+    display: flex;
+    justify-content: space-around;
+}
+.wd-explore-label {
+    flex-basis: 100%;
+    padding-bottom: 16px;
 }
 .wd-explore-label > a {
-    color: darkgray;
+    color: rgb(110, 118, 125);
+    text-decoration: none;
 }
-
+.wd-explore-label > .wd-explore-label-selected {
+    color: rgb(29, 161, 242);
+    padding-bottom: 15px;
+    border-bottom: 2px rgb(29, 161, 242) solid;
+}
 .wd-explore-suggestions {
     padding: 16px;
-
+    flex-direction: column;
 }
 .wd-explore-suggestions > .wd-explore-suggestion {
-    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wd-explore-suggestion > .fa.fa-ellipsis-h {
+    padding: 16px;
+    color: rgb(110,118,125);
 }
 .wd-explore-topic {
     font-size: 13px;
@@ -41,8 +70,8 @@
 }
 .wd-explore-topic-title {
     color: white;
+    display: block;
 }
-
 .wd-explore-posts {
     display: flex;
     padding: 16px;

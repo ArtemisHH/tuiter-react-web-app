@@ -2,10 +2,13 @@
 body {
     background-color: black;
     color: white;
-    border-color:rgb(47, 51, 54);
+    border:rgb(47, 51, 54) solid;
     margin: 12px;
+    display: block;
 }
-
+.wd-border-bottom {
+    border-bottom: 1px rgb(47, 51, 54) solid;
+}
 .wd-float-left {
     float: left;
 }
@@ -33,3 +36,4 @@ body {
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
 }
+
