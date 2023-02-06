@@ -1,0 +1,35 @@
+/*This is general stylesheets for Tuiter*/
+body {
+    background-color: black;
+    color: white;
+    border-color:rgb(47, 51, 54);
+    margin: 12px;
+}
+
+.wd-float-left {
+    float: left;
+}
+.wd-float-right {
+    float: right;
+}
+.wd-float-top {
+    float: start;
+}
+
+.wd-thin-border {
+    border: 1px lightgray solid;
+}
+.wd-text-lightgray {
+    color: lightgray;
+}
+.wd-text-bold {
+    font-weight: bold;
+}
+.wd-round-corners-top {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.wd-round-corners-bottom{
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}

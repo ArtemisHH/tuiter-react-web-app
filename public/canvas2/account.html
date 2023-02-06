@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Account</h1>
+    <lable for="username">Names:</lable>
+    <br/>
+    <!-- this id help to uniquely identify within the same page -->
+    <input
+            id="username"
+            value="Jose"
+            placeholder="John Doe"
+            title="please enter your name"
+    />
+    <br/>
+
+    <label for="bio">Bio:</label>
+    <br/>
+    <textarea
+            id="bio"
+            placeholder="I like to ski and play Lego"
+            rows="10"
+            cols="40">Northeastern professor. Teaching WebDev
+    </textarea>
+    <br/>
+
+    <lable>Married:</lable>
+    <br/>
+    <input type="radio" name="married"/>Yes
+    <input type="radio" name="married"/>No
+    <br/>
+    <br/>
+
+    <label>Married:</label>
+    <br/>
+    <input id="married-yes" type="radio" name="married"/>
+    <label for="married-yes">YES</label>
+    <input id="married-no" type="radio" name="married"/>
+    <label for="married-no">NO</label>
+    <br/>
+    <br/>
+
+    <label>Marital Status</label>
+    <select>
+        <option value="MARRIED">Married</option>
+        <option value="SINGLE">Single</option>
+        <option value="WIDOW">Widow</option>
+    </select>
+    <br/>
+    <br/>
+
+    <lable>Courses Teaching This Semester</lable>
+    <input type="checkbox">CS4550
+    <input type="checkbox">CS5610
+    <input type="checkbox">CS5200
+    <input type="checkbox">CS3200
+    <input type="checkbox">CS5500
+    <br/>
+    <br/>
+
+    <lable>Courses Teaching This Semester</lable><br/>
+    <label><input type="checkbox">CS4550</label><br/>
+    <label><input type="checkbox">CS5610</label><br/>
+    <label><input type="checkbox">CS5200</label><br/>
+    <label><input type="checkbox">CS3200</label><br/>
+    <label><input type="checkbox">CS5500</label><br/>
+    <br/>
+
+    <label>Email</label>
+    <input type="email"/>
+    <br/>
+    <label>Years teaching</label>
+    <input type="number" min="1" max="100"/>
+    <br/>
+    <label>Phone</label>
+    <input type="tel"/>
+    <br/>
+    <label>Date of Birth</label>
+    <input type="date"
+           value="2023-01-17"
+           min="2023-01-10"
+           max="2023-01-23"
+    />
+    <br/>
+    <button>Submit</button>
+    <button>Cancel</button>
+</body>
+</html>

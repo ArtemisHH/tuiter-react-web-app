@@ -1,0 +1,74 @@
+/*This is a stylesheets for Bookmarks of Tuiter*/
+.wd-bookmarks-title {
+    /*padding: 12px 0px 0px 16px*/
+}
+.wd-bookmarks-top {
+    padding: 12px 0px 0px 16px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+.wd-bookmarks-handle {
+    padding: 0px 0px 12px 16px;
+    font-size: 13px;
+    color: lightgray;
+}
+.wd-bookmarks-border {
+    border: 1px lightgray solid;
+}
+.wd-bookmarks-avatar-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.wd-posts {
+    width:100%;
+    font-size: 15px;
+    display: flex;
+}
+.wd-posts-left {
+    padding: 12px 0px 0px 16px;
+}
+.wd-posts-right {
+    padding-top: 12px;
+}
+.wd-posts-title {
+    padding: 12px 0px 0px 12px;
+}
+
+.wd-posts-content {
+    max-width: 506px;
+    padding: 0px 0px 12px 16px;
+}
+.wd-posts-screenshot {
+    border: 1px lightgray;
+}
+
+.wd-posts-sh-image {
+    width: 504px;
+    height: 264px;
+    margin-left: 12px;
+}
+.wd-posts-sh-content {
+    margin-left: 12px;
+    padding: 12px;
+    width: 480px;
+}
+
+.wd-posts-icons {
+    padding: 12px 0px 0px 12px;
+    display: flex;
+}
+.wd-posts-icons > .wd-posts-icon {
+    flex-basis: 100%
+}
+.wd-posts-icon > a {
+    color: lightgray;
+}
+.wd-posts-icon-red {
+    color: red;
+}
+.wd-posts-icon-no {
+    padding-right: 12px;
+}

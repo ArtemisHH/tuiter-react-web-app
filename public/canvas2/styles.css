@@ -1,0 +1,133 @@
+h1 {
+    font-size: 2em;
+    color: #61dafb;
+    background-color: green;
+}
+
+.highlighted-text {
+    background-color: lightgreen;
+    color: blue;
+    font-width: bold;
+}
+.bg-yellow {
+    background-color: yellow;
+}
+
+.bg-primary{
+
+}
+
+.bg-secondary {
+
+}
+
+.bg-danger{
+
+}
+
+.bg-success{
+
+}
+
+.fg-purple {
+    color: purple;
+}
+
+.txt-lg {
+    font-size: 2em;
+}
+
+.w-200-px {
+    width: 200px;
+}
+.w-100-px {
+    width: 100px;
+}
+
+.w-33-pc {
+    width: 33%;
+}
+.float-done {
+    clear: both;
+}
+
+/*within the row, we are floating*/
+.row{
+    clear: both;
+}
+/*each column float to the left*/
+.col {
+    float: left;
+}
+
+.col-50-pc {
+    float: left;
+    width: 50%;
+}
+
+.col-33-pc {
+    float: left;
+    width: 33%;
+}
+.col-66-pc {
+    float: left;
+    width: 66%;
+}
+.col-40-pc {
+    float: left;
+    width: 40%;
+}
+.col-60-pc {
+    float: left;
+    width: 60%;
+}
+/*they divided the total width to 12 parts*/
+.col-1 {
+    float: left;
+    width: cal(1/12);
+}
+.col-2 {
+    float: left;
+    width: 16.666%
+}
+.col-3 {
+    float: left;
+    width: 25%
+}
+.col-4 {
+    float: left;
+    width: 33.333%
+}
+.col-5 {
+    float: left;
+    width: 41.666%
+}
+.col-6 {
+    float: left;
+    width: 50%
+}
+.col-7 {
+    float: left;
+    width: 58.333%
+}
+.col-8 {
+    float: left;
+    width: 66.666%
+}
+.col-9 {
+    float: left;
+    width: 75%
+}
+.col-10 {
+    float: left;
+    width: 83.333%
+}
+.col-11 {
+    float: left;
+    width: 91.666%
+}
+.col-12 {
+    float: left;
+    width: 100%
+}
+

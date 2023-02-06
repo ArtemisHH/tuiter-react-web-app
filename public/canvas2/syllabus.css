@@ -1,0 +1,49 @@
+h1{
+    background-color: #ffff07;
+}
+
+h2 {
+    background-color: blue;
+    color: white;
+}
+
+/*use ID to specified*/
+#goals {
+    background-color: #ff7070;
+    color: #282c34;
+    /*it can be set in three different lines
+    or it can be set within one line with space*/
+   /* border-width: 20px;
+    border-color: blue;
+    border-style: ridge;*/
+    border: 30px blue dotted;
+    /*general rule*/
+    border-bottom: 40px red ridge;
+    border-top-width: 20px;
+    border-top-color: purple;
+    border-top-style: dashed;
+
+    /*overall margin*/
+    margin: 30px;
+    margin-top: 20px;
+    margin-left: 50px;
+
+    padding: 10px;
+    padding-right: 40px;
+
+}
+
+p {
+    background-color: green;
+}
+p {
+    background-color: #61dafb;
+    color: black;
+}
+
+
+
+#focus-pg {
+    background-color: lightgreen;
+    color: red;
+}
