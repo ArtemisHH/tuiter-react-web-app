@@ -1,0 +1,62 @@
+/*New classes create for Assignment 4 challenge*/
+.wd-brand-color {
+    color: #ff7070;
+}
+
+.wd-nav-v-highlight {
+    font-weight: bold;
+}
+
+.wd-nav-h-highlight {
+    font-weight: bold;
+    border-bottom: solid #ff7070;
+}
+
+.wd-certified-user {
+    color: #ff7070;
+}
+
+.wd-certified-gold {
+    color: goldenrod;
+}
+
+.wd-avatar-img{
+    width: 48px;
+    length: 48px;
+}
+.wd-dot-badge {
+    position: relative;
+    top: -4px;
+    left: -4px;
+    translate: 50%;
+    padding: 4px 4px 4px 4px;
+    background-color: #ff7070;
+    border-radius: 50%;
+    border-color: #ff7070;
+}
+/*Override bootstrap*/
+.rounded-pill.override-bs {
+    background-color: #ff7070;
+    border-color: #ff7070;
+    color: white;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.fa-stack.override-bs {
+    width:1.25em;
+}
+.text-over-image{
+    position: relative;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    left: 0.25em;
+    z-index: 1;
+    margin-top: -3em;
+}
+
+.wd-searchbar {
+    margin-left: -2rem;
+}
+

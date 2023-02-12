@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -27,12 +28,19 @@
     <title>React App</title>
   </head>
   <body>
-    <h1>Web Dev Assignments</h1>
-    <ul>
-      <li><a href="labs/a2/index.html">Assignment 2 labs</a></li>
-      <li><a href="labs/a3/index.html">Assignment 3 labs</a></li>
-      <li><a href="tuiter/navigation.html">Tuiter</a></li>
+    <div class="container">
+      <h1 id="welcome-title" class="font-size-2em color-blue">Web Dev Assignments</h1>
+      <!--when the list items are only the link itself, we can change the "li" to "a"
+        which remove the underline of elements and the whole item box is clickable -->
+        <div class="list-group">
+          <a class="list-group-item" href="https://a2--heroic-monstera-cb6b16.netlify.app/">Assignment 2 labs</a>
+          <a class="list-group-item" href="https://a3--heroic-monstera-cb6b16.netlify.app/">Assignment 3 labs</a>
+          <a class="list-group-item" href="labs/a4/index.html">Assignment 4 labs</a>
+          <a class="list-group-item" href="tuiter/navigation.html">Tuiter</a>
+          <a class="list-group-item" href="tuiter/explore/index-a4.html">Tuiter - A4</a>
+          <a class="list-group-item" href="tuiter/explore/index-a4-challenge.html">Tuiter - A4 Challenge</a>
+        </div>
+    </div>
 
-    </ul>
   </body>
 </html>
