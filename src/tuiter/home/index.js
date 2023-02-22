@@ -1,7 +1,6 @@
 import React from "react";
 import hpostsArray from './hposts.json';
 import PostItem from "./post-item";
-import RepostItem from "./repost-item";
 
 
 const HomeComponent = () => {

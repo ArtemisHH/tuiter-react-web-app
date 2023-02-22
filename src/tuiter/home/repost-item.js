@@ -21,7 +21,7 @@ const RepostItem = (
     return(
         <li className="list-group-item rounded-5">
             <div className="d-flex align-items-center">
-                <img className="wd-repost-avatar me-2" src={`/images/${repost.avatarIcon}`}/>
+                <img className="wd-repost-avatar me-2" src={`/images/${repost.avatarIcon}`} alt=''/>
                 <div className="d-flex justify-content-between">
                 <div>{repost.userName}
                     <span className="fa-stack override-bs fa-fw">
@@ -35,8 +35,7 @@ const RepostItem = (
             {repost.content}
             {repost.tuitLink && <span><i className="fa fa-arrow-right mx-1"></i>{repost.tuitLink}</span>}
             {!repost.tuitLink && ''}
-            {repost.image && <img className="rounded-5 mt-2 w-100" src={`/images/${repost.image}`}/>}
-            {!repost.image && ''}
+            {repost.image && <img className="rounded-5 mt-2 w-100" src={`/images/${repost.image}`} alt=''/>}
         </li>
     );
 };

@@ -1,7 +1,6 @@
 import React from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./index.css";
-import repostItem from "./repost-item";
 import RepostItem from "./repost-item";
 
 const PostItem = (
@@ -27,7 +26,7 @@ const PostItem = (
         <li className="list-group-item">
            <div className="row mt-2">
                <div className="col-2">
-                   <img className="wd-avatar-img" src={`/images/${hpost.avatarIcon}`}/>
+                   <img className="wd-avatar-img" src={`/images/${hpost.avatarIcon}`} alt=''/>
                </div>
                <div className="col-10">
                     <div className="d-flex justify-content-between">
@@ -38,13 +37,12 @@ const PostItem = (
                             </span>
                             <span className="text-muted small">@{hpost.handle} · {hpost.time}</span>
                         </div>
-                        <a className="float-end" href="/" className="text-muted"><i className="fa fa-ellipsis"></i></a>
+                        <a href="/" className="float-end text-muted"><i className="fa fa-ellipsis"></i></a>
                     </div>
                     {hpost.content}
                     {hpost.tuitLink && <span className="text-primary"><i className="fa fa-arrow-right text-black mx-1"></i>{hpost.tuitLink}</span>}
                     {!hpost.tuitLink && ''}
-                    {hpost.image && <img className="rounded-5 mt-2 w-100" src={`/images/${hpost.image}`}/>}
-                    {!hpost.image && ''}
+                    {hpost.image && <img className="rounded-5 mt-2 w-100" src={`/images/${hpost.image}`} alt=''/>}
                     {hpost.repost && <RepostItem/>}
                     {!hpost.repost && ''}
                     <div className="d-flex text-muted my-2">
