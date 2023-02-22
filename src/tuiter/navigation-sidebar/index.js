@@ -10,7 +10,7 @@ const NavigationSidebar = () => {
     return (
         <>
         <div className="list-group">
-            <a className="list-group-item">
+            <a href="/" className="list-group-item">
                 <i className="fab fa-twitter fa-2x"></i></a>
             <Link to="/tuiter/home" className={`list-group-item d-inline-flex align-items-center ${active ==='home'?'active':''}`}>
                 <i className="fa fa-home"></i>
@@ -33,7 +33,7 @@ const NavigationSidebar = () => {
             <Link to="/" className={`list-group-item d-inline-flex align-items-center ${active ==='profile'?'active':''}`}>
                 <i className="fa fa-user"></i>
                 <span className="d-none d-xl-block ms-3">Profile</span></Link>
-            <a className={`list-group-item d-inline-flex align-items-center ${active ==='more'?'active':''}`}>
+            <a href="/" className={`list-group-item d-inline-flex align-items-center ${active ==='more'?'active':''}`}>
                 <i className="fa fa-ellipsis"></i>
                 <span className="d-none d-xl-block ms-3">More</span></a>
         </div>
