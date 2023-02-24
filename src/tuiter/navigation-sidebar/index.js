@@ -18,6 +18,9 @@ const NavigationSidebar = () => {
             <Link to="/tuiter/explore" className={`list-group-item d-inline-flex align-items-center ${active ==='explore'?'active':''}`}>
                 <i className="fa fa-hashtag"></i>
                 <span className="d-none d-xl-block ms-3">Explore</span></Link>
+            <Link to="/" className={`list-group-item d-inline-flex align-items-center ${active ==='labs'?'active':''}`}>
+                <i className="fa fa-pencil"></i>
+                <span className="d-none d-xl-block ms-3">Labs</span></Link>
             <Link to="/" className={`list-group-item d-inline-flex align-items-center ${active ==='notifications'?'active':''}`}>
                 <i className="fa fa-bell"></i>
                 <span className="d-none d-xl-block ms-3">Notifications</span></Link>
