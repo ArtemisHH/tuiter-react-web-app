@@ -2,41 +2,43 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {useLocation} from "react-router";
 
-const NavigationSidebar = () => {
+function NavigationSidebar() {
     const {pathname} = useLocation();
-    const paths = pathname.split('/');
-    const active = paths[2];
+    /*const paths = pathname.split('/');
+    const active = paths[2];*/
+    const isActive = (path) =>
+        pathname.indexOf(path) >= 0 ? 'active':'';
 
     return (
         <>
         <div className="list-group">
             <a href="/" className="list-group-item">
                 <i className="fab fa-twitter fa-2x"></i></a>
-            <Link to="/tuiter/home" className={`list-group-item d-inline-flex align-items-center ${active ==='home'?'active':''}`}>
+            <Link to="/tuiter/home" className={`list-group-item d-inline-flex align-items-center ${isActive('home')}`}>
                 <i className="fa fa-home"></i>
                 <span className="d-none d-xl-block ms-3">Home</span></Link>
-            <Link to="/tuiter/explore" className={`list-group-item d-inline-flex align-items-center ${active ==='explore'?'active':''}`}>
+            <Link to="/tuiter/explore" className={`list-group-item d-inline-flex align-items-center ${isActive('explore')}`}>
                 <i className="fa fa-hashtag"></i>
                 <span className="d-none d-xl-block ms-3">Explore</span></Link>
-            <Link to="/" className={`list-group-item d-inline-flex align-items-center ${active ==='labs'?'active':''}`}>
+            <Link to="/" className={`list-group-item d-inline-flex align-items-center ${isActive('labs')}`}>
                 <i className="fa fa-pencil"></i>
                 <span className="d-none d-xl-block ms-3">Labs</span></Link>
-            <Link to="/" className={`list-group-item d-inline-flex align-items-center ${active ==='notifications'?'active':''}`}>
+            <Link to="/" className={`list-group-item d-inline-flex align-items-center ${isActive('notifications')}`}>
                 <i className="fa fa-bell"></i>
                 <span className="d-none d-xl-block ms-3">Notifications</span></Link>
-            <Link to="/" className={`list-group-item d-inline-flex align-items-center ${active ==='messages'?'active':''}`}>
+            <Link to="/" className={`list-group-item d-inline-flex align-items-center ${isActive('messages')}`}>
                 <i className="far fa-envelope"></i>
                 <span className="d-none d-xl-block ms-3">Messages</span></Link>
-            <Link to="/" className={`list-group-item d-inline-flex align-items-center ${active ==='bookmarks'?'active':''}`}>
+            <Link to="/" className={`list-group-item d-inline-flex align-items-center ${isActive('bookmarks')}`}>
                 <i className="fa fa-bookmark"></i>
                 <span className="d-none d-xl-block ms-3">Bookmarks</span></Link>
-            <Link to="/" className={`list-group-item d-inline-flex align-items-center ${active ==='lists'?'active':''}`}>
+            <Link to="/" className={`list-group-item d-inline-flex align-items-center ${isActive('lists')}`}>
                 <i className="fa fa-list"></i>
                 <span className="d-none d-xl-block ms-3">Lists</span></Link>
-            <Link to="/" className={`list-group-item d-inline-flex align-items-center ${active ==='profile'?'active':''}`}>
+            <Link to="/tuiter/profile" className={`list-group-item d-inline-flex align-items-center ${isActive('profile')}`}>
                 <i className="fa fa-user"></i>
                 <span className="d-none d-xl-block ms-3">Profile</span></Link>
-            <a href="/" className={`list-group-item d-inline-flex align-items-center ${active ==='more'?'active':''}`}>
+            <a href="/" className={`list-group-item d-inline-flex align-items-center ${isActive('more')}`}>
                 <i className="fa fa-ellipsis"></i>
                 <span className="d-none d-xl-block ms-3">More</span></a>
         </div>

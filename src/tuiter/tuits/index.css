@@ -1,0 +1,12 @@
+.wd-avatar-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.wd-repost-avatar {
+    align-self: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
