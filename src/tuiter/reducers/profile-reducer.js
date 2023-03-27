@@ -6,7 +6,7 @@ const initialProfile = {
     handle: '@jannunzi',
     profilePic: 'profile1.jpg',
     bannerPic: 'header.jpg',
-    bio: 'Faculty, Software Engineer, AI, Space, and renewable enthusiast.Retuits and likes are not endorsements.',
+    bio: 'Faculty, Software Engineer, AI, Space, and renewable enthusiast. Retuits and likes are not endorsements.',
     website: 'youtube.com/webdevtv',
     location: 'Boston, MA',
     dateOfBirth: '7/7/1968',
