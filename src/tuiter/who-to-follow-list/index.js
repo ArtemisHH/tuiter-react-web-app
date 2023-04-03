@@ -1,8 +1,7 @@
 import React from "react";
 /*import whoArray from '../data/who.json';*/
 import {useSelector} from "react-redux";
-import WhoToFollowListItem
-    from "./who-to-follow-list-item";
+import WhoToFollowListItem from "./who-to-follow-list-item";
 
 const WhoToFollowList = () => {
     const whoArray = useSelector((state) => state.who);

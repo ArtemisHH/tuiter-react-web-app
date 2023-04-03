@@ -12,10 +12,10 @@ function TodoList() {
         editing: false
     })
     const onAddTodo = () => {
-        /*newTodo.id = Date.now()*/
-        /*todos.push(newTodo)
-        console.log(todos)*/
-        /*const newTodos = [...todos, newTodo]*/
+/*        /!*newTodo.id = Date.now()*!/
+        /!*todos.push(newTodo)
+        console.log(todos)*!/
+        const newTodos = [...todos, newTodo]*/
         setTodos([...todos, newTodo])
     }
     const onNewTodoChange = (event) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./index.css";
 import {useSelector} from "react-redux";
-import profileReducer from "../reducers/profile-reducer";
+/*import profileReducer from "../reducers/profile-reducer";*/
 import {Link} from "react-router-dom";
 
 
@@ -12,7 +12,6 @@ function UserProfile() {
     const editProfileClick = (
         <Link to="/edit-profile"></Link>
     )
-
     return (
         <>
             <h3 className="d-inline-flex">
@@ -20,11 +19,11 @@ function UserProfile() {
                 <span className="mx-4">{profile.firstName} {profile.lastName}</span>
             </h3>
             <div>
-                <img src={profile.bannerPic} className="w-100 h-25"/>
+                <img src={profile.bannerPic} className="w-100 h-25" alt=''/>
             </div>
             <div className="d-inline-flex align-content-center">
-                <img src={profile.profilePic} className="ms-3 wd-profile-img"/>
-                <button className="btn rounded-pill mt-2 form-control d-flex justify-content-end" type="button"
+                <img src={profile.profilePic} className="ms-3 wd-profile-img" alt=''/>
+                <button className="btn rounded-pill mt-2 form-control d-flex justify-content-end float-end" type="button"
                         onClick={()=> editProfileClick}>Edit profile</button>
             </div>
             <div className="mt-5">
@@ -58,5 +57,5 @@ function UserProfile() {
             </div>
         </>
     )
-};
+}
 export default UserProfile;

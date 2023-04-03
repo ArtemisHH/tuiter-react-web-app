@@ -2,9 +2,10 @@ import React from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./index.css";
 import {useDispatch} from "react-redux";
-import {deleteTuit} from "./tuits-reducer";
-/*import {deleteTuitThunk} from "../../services/tuits-thunks";*/
+/*import {deleteTuit} from "./tuits-reducer";*/
+import {deleteTuitThunk} from "../../services/tuits-thunks";
 import TuitStats from "./tuit-stats";
+import tuits from './tuits.json';
 
 const TuitItem = (
     {
@@ -29,7 +30,8 @@ const TuitItem = (
 ) => {
     const dispatch = useDispatch();
     const deleteTuitHandler = (id) => {
-        dispatch(deleteTuit(id));
+        /*dispatch(deleteTuit(id));*/
+        dispatch(deleteTuitThunk(id));
     }
     return (
         <li className="list-group-item">
@@ -49,7 +51,7 @@ const TuitItem = (
                         <i className="bi bi-x-lg float-end" onClick={() => deleteTuitHandler(tuit._id)}></i>
                     </div>
                     {tuit.tuit}
-                    <TuitStats/>
+                    <TuitStats tuit={tuits}/>
                     {/*<div className="d-flex text-muted my-2">
                         <div className="flex-fill">
                             <i className="far fa-comment"></i>

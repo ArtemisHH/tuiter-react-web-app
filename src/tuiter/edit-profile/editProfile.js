@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-import {createTuit} from "../tuits/tuits-reducer";
-import {useDispatch} from "react-redux";
+/*import {createTuit} from "../tuits/tuits-reducer";
+import {useDispatch} from "react-redux";*/
 
 const EditProfile = () => {
     let [profile, setProfile] = useState('');
-    const dispatch = useDispatch();
+   /* const dispatch = useDispatch();*/
     const saveProfileClick = () => {
 
     }
@@ -20,12 +20,12 @@ const EditProfile = () => {
     const onEditDOBChange = (profile, event) => {
         setProfile(profile.map(t => t.Name === profile.Name ? {...t, DOB: event.target.value} : t))
     }
-    const tuitClickHandler = () => {
+/*    const tuitClickHandler = () => {
         const newTuit = {
             tuit: EditProfile
         }
         dispatch(createTuit(newTuit));
-    }
+    }*/
     return (
         <>
             <h3 className="d-inline-flex">

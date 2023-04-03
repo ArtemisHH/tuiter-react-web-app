@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import tuits from './tuits.json';
-import {useSelector} from "react-redux";
+/*import {deleteTuitThunk, findTuitsThunk, createTuitThunk, updateTuitThunk} from "../../services/tuits-thunks";*/
+/*import {useSelector} from "react-redux";*/
 
 const currentUser = {
     "userName": "NASA",
@@ -32,25 +33,37 @@ const tuitsSlice = createSlice({
             state.splice(index, 1);
         },
         replyTuit(state, action) {
-          const tuit = state.find((tuit) => tuit._id === action.payload._id)
-            tuit.replies += 1;
+          const tuit = state.find(tuit => tuit._id === action.payload._id);
+          return {
+              ...tuit,
+              replies: tuit.replies + 1,
+          }
         },
         retuitTuit(state, action) {
-            const tuit = state.find((tuit) => tuit._id === action.payload._id)
-            tuit.retuits += 1;
+            const tuit = state.find(tuit => tuit._id === action.payload._id);
+            return {
+                ...tuit,
+                retuits: tuit.retuits + 1,
+            }
         },
         likeTuit(state, action) {
-            const tuit = state.find((tuit) => tuit._id === action.payload._id)
-            if (tuit.liked = false) {
-                tuit.likes += 1;
-                tuit.liked = true;
+            const tuit = state.find(tuit => tuit._id === action.payload._id);
+            if (!tuit.liked) {
+                return {
+                    ...tuit,
+                    likes: tuit.likes + 1,
+                    liked: true,
+                }
+
             } else {
-                tuit.likes -= 1;
-                tuit.liked = false;
+                return {
+                    ...tuit,
+                    likes: tuit.likes - 1,
+                    liked: false,
+                }
             }
         }
     }
 });
-
 export const {createTuit, deleteTuit, replyTuit, retuitTuit, likeTuit} = tuitsSlice.actions;
 export default tuitsSlice.reducer;
