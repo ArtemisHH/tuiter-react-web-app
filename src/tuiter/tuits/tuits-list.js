@@ -15,12 +15,12 @@ const TuitsList = () => {
                     loading...
                 </li>
             }
-{/*            {    tuitsArray.map(tuit =>
+            {    tuits.map(tuit =>
                     <TuitItem
                         key={tuit._id}
                         tuit={tuit}
                     />)
-            }*/}
+            }
         </ul>
     );
 };
