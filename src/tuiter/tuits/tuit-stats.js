@@ -2,35 +2,36 @@ import React from "react";
 import {replyTuit, retuitTuit, likeTuit} from "./tuits-reducer";
 import {useDispatch, useSelector} from "react-redux";
 
+
 const TuitStats = () => {
-    const tuit = useSelector(state => state.tuits);
+    const {replies, retuits, likes, liked} = useSelector(state => state.tuits);
     const dispatch = useDispatch();
-    const replyClick = (tuit) => {
-        dispatch(replyTuit(tuit))
+    const replyClick = () => {
+        dispatch(replyTuit());
     }
-    const retuitClick = (tuit) => {
-        dispatch(retuitTuit(tuit))
+    const retuitClick = () => {
+        dispatch(retuitTuit());
     }
-    const likeClick = (tuit) => {
-        dispatch(likeTuit(tuit))
+    const likeClick = () => {
+        dispatch(likeTuit());
     }
     return (
             <div className="row">
                 <div className="d-flex text-muted my-2">
                     <div className="flex-fill">
-                        <i className="far fa-comment me-2" onClick={() => replyClick(tuit)}></i>
-                        <span className="mx-2">{tuit.replies}</span>
+                        <i className="far fa-comment me-2" onClick={replyClick}></i>
+                        <span className="mx-2">{replies}</span>
                     </div>
                     <div className="flex-fill">
-                        <i className="fa fa-retweet" onClick={() => retuitClick(tuit)}></i>
-                        <span className="mx-2">{tuit.retuits}</span>
+                        <i className="fa fa-retweet" onClick={retuitClick}></i>
+                        <span className="mx-2">{retuits}</span>
                     </div>
                     <div className="flex-fill">
-                        {tuit.liked && <i className="bi bi-heart-fill me-2 text-danger" onClick={() => likeClick(tuit)}>
-                            <span className="mx-2">{tuit.likes}</span></i>
+                        {liked && <i className="bi bi-heart-fill me-2 text-danger" onClick={likeClick}>
+                            <span className="mx-2">{likes}</span></i>
                         }
-                        {!tuit.liked && <i className="bi bi-heart me-2" onClick={() => likeClick(tuit)}>
-                            <span className="mx-2">{tuit.likes}</span></i> }
+                        {!liked && <i className="bi bi-heart me-2" onClick={likeClick}>
+                            <span className="mx-2">{likes}</span></i> }
                     </div>
                     <div className="flex-fill">
                         <i className="bi bi-upload"></i>
