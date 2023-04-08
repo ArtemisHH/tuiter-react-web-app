@@ -16,23 +16,14 @@ const EditProfile = () => {
 
 
     const saveProfileClick = () => {
-        dispatch(updateProfile());
+        dispatch(updateProfile({
+            firstName: fname,
+            lastName: lname,
+            bio: bio,
+            dateOfBirth: dob,
+            location: loc,
+        }));
     }
-/*    const onEditBannerPicChange = (profile, event) => {
-        setBanner(profile.map(t => t.id === profile.id ? {...t, [banner]: event.target.value} : t))
-    }*/
-/*    const onEditNameChange = (profile, event) => {
-        setName(profile.map(t => t.id === profile.id ? {...t, [name]: event.target.value} : t))
-    }
-    const onEditBioChange = (profile, event) => {
-        setBio(profile.map(t => t.id === profile.id ? {...t, [bio]: event.target.value} : t))
-    }
-    const onEditDOBChange = (profile, event) => {
-        setDob(profile.map(t => t.id === profile.id ? {...t, [dateOfBirth]: event.target.value} : t))
-    }
-    const onEditLocChange = (profile, event) => {
-        setLoc(profile.map(t => t.id === profile.id ? {...t, [location]: event.target.value} : t))
-    }*/
 
     return (
         <>
