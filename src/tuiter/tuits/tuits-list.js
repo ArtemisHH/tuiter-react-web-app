@@ -7,7 +7,7 @@ const TuitsList = () => {
     /*const tuitsArray = useSelector(state => state.tuitsData)*/
     const {tuits, loading} = useSelector(state => state.tuitsData);
     const dispatch = useDispatch();
-    useEffect(() => {dispatch(findTuitsThunk())}, [dispatch]);
+    useEffect(() => {dispatch(findTuitsThunk())}, []);
     return (
         <ul className="list-group">
             { loading &&

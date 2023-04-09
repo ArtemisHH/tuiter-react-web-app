@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-/*import tuits from './tuits.json';*/
-import {deleteTuitThunk, findTuitsThunk, createTuitThunk} from "../../services/tuits-thunks";
+import tuits from './tuits.json';
+import {deleteTuitThunk, findTuitsThunk, createTuitThunk, updateTuitThunk} from "../../services/tuits-thunks";
 /*import {useSelector} from "react-redux";*/
 
 const initialState = {
@@ -35,6 +35,11 @@ const tuitsSlice = createSlice({
                 state.loading = false
                 state.tuits = payload
             },
+        [findTuitsThunk.rejected]:
+            (state, action) => {
+                state.loading = false
+                state.error = action.error
+            },
         [deleteTuitThunk.fulfilled] :
             (state, { payload }) => {
                 state.loading = false
@@ -46,7 +51,7 @@ const tuitsSlice = createSlice({
                 state.loading = false
                 state.tuits.push(payload)
             },
-/*        [updateTuitThunk.fulfilled]:
+        [updateTuitThunk.fulfilled]:
             (state, { payload }) => {
                 state.loading = false
                 const tuitNdx = state.tuits
@@ -55,58 +60,11 @@ const tuitsSlice = createSlice({
                     ...state.tuits[tuitNdx],
                     ...payload
                 }
-            },*/
-        [findTuitsThunk.rejected]:
-            (state, action) => {
-                state.loading = false
-                state.error = action.error
-            },
+            }
+
     },
     reducers:{ },
-   /* reducers: {
-        createTuit(state, action) {
-            state.unshift({
-                ...action.payload,
-                ...templateTuit,
-                _id: (new Date()).getTime(),
-            })
-        },
-        deleteTuit(state, action) {
-            const index = state.findIndex(tuit => tuit._id === action.payload);
-            state.splice(index, 1);
-        },
-        replyTuit(state, action) {
-          const tuit = state.find(tuit => tuit._id === action.payload._id);
-          return {
-              ...tuit,
-              replies: tuit.replies + 1,
-          }
-        },
-        retuitTuit(state, action) {
-            const tuit = state.find(tuit => tuit._id === action.payload._id);
-            return {
-                ...tuit,
-                retuits: tuit.retuits + 1,
-            }
-        },
-        likeTuit(state, action) {
-            const tuit = state.find(tuit => tuit._id === action.payload._id);
-            if (!tuit.liked) {
-                return {
-                    ...tuit,
-                    likes: tuit.likes + 1,
-                    liked: true,
-                }
 
-            } else {
-                return {
-                    ...tuit,
-                    likes: tuit.likes - 1,
-                    liked: false,
-                }
-            }
-        }
-    }*/
 });
 
 export default tuitsSlice.reducer;
